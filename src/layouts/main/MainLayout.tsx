@@ -9,7 +9,7 @@ type Props = {
 };
 
 const CCMainLayout = ({ children }: Props) => {
-  const router = useRouter();
+  // const router = useRouter();
   const { data } = useUser();
 
   const checkAuth = useCallback(() => {

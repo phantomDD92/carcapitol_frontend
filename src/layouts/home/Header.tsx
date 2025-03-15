@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { LucideChevronDown, LucideMenu, LucideX } from 'lucide-react';
+import { LucideMenu, LucideX } from 'lucide-react';
 
 
 const Header = ({
@@ -14,9 +13,9 @@ const Header = ({
   menuItems: string[];
   position: 'sticky' | 'fixed';
 }) => {
-  
+
   const navbarRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     document.addEventListener('scroll', (e) => {
       e.preventDefault();

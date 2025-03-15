@@ -94,7 +94,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 
   useEffect(() => {
     handleGetUserDataFromToken().then(() => {});
-  }, []);
+  }, [handleGetUserDataFromToken]);
 
   return (
     <UserContext.Provider

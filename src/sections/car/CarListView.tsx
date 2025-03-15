@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ICar } from "@/types/car-info.interface";
 import CarListItem from "./CarListItem";
-import { LucideChevronLeft, LucideChevronRight, LucideChevronsLeft, LucideChevronsRight, LucideCircleArrowLeft } from 'lucide-react';
+import { LucideChevronLeft, LucideChevronRight, LucideChevronsLeft, LucideChevronsRight } from 'lucide-react';
 
 type Props = {
   page?: number,

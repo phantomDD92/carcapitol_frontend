@@ -18,8 +18,8 @@ import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
 import CCMainLayout from '@/layouts/main/MainLayout';
 import DashboardLayout from '@/layouts/dashboard/Layout';
-import { CarCarousel } from '@/sections/dashboard/vehicle/car-carousel';
-import { CarSpecifications } from '@/sections/dashboard/vehicle/car-specification';
+// import { CarCarousel } from '@/sections/dashboard/vehicle/car-carousel';
+// import { CarSpecifications } from '@/sections/dashboard/vehicle/car-specification';
 import { CarDocuments } from '@/sections/dashboard/vehicle/car-documents';
 import { BookTestDriveDialog } from '@/components/custom/book-test-drive-dialog';
 import {

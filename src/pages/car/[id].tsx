@@ -1,14 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   MessageSquare,
   Calendar,
   Heart,
   Scale,
-  FileText,
   ChevronDown,
 } from 'lucide-react';
 
@@ -17,7 +15,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
 import CCMainLayout from '@/layouts/main/MainLayout';
-import DashboardLayout from '@/layouts/dashboard/Layout';
 import { CarCarousel } from '@/sections/dashboard/vehicle/car-carousel';
 import { CarSpecifications } from '@/sections/dashboard/vehicle/car-specification';
 import { CarDocuments } from '@/sections/dashboard/vehicle/car-documents';
@@ -303,6 +300,7 @@ export async function getServerSideProps(context: { params: { id: string; }; }) 
       props: { car }
     }
   } catch (error) {
+    console.error(error);
     return {
       props: { car: undefined },
     };

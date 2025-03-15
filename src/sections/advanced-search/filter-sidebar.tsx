@@ -78,27 +78,32 @@ export function FilterSidebar({ onFiltersChange }: Props) {
 
   const handleConditionChange = (value: number) => {
     setCondition(value);
-    onFiltersChange && onFiltersChange({ color, yearRange, priceRange, mileageRange, condition: value })
+    if (onFiltersChange)
+      onFiltersChange({ color, yearRange, priceRange, mileageRange, condition: value })
   }
 
   const handleColorChange = (value: number) => {
     setColor(value);
-    onFiltersChange && onFiltersChange({ color: value, yearRange, priceRange, mileageRange, condition })
+    if (onFiltersChange)
+      onFiltersChange({ color: value, yearRange, priceRange, mileageRange, condition })
   }
 
   const handleYearRangeChange = (value: number[]) => {
     setYearRange(value);
-    onFiltersChange && onFiltersChange({ color, yearRange: value, priceRange, mileageRange, condition })
+    if (onFiltersChange)
+      onFiltersChange({ color, yearRange: value, priceRange, mileageRange, condition })
   }
 
   const handlePriceRangeChange = (value: number[]) => {
     setPriceRange(value);
-    onFiltersChange && onFiltersChange({ color, yearRange, priceRange: value, mileageRange, condition })
+    if (onFiltersChange)
+      onFiltersChange({ color, yearRange, priceRange: value, mileageRange, condition })
   }
 
   const handleMileageRangeChange = (value: number[]) => {
     setMileageRange(value);
-    onFiltersChange && onFiltersChange({ color, yearRange, priceRange, mileageRange: value, condition })
+    if (onFiltersChange)
+      onFiltersChange({ color, yearRange, priceRange, mileageRange: value, condition })
   }
 
   return (

@@ -118,5 +118,4 @@ export async function getServerSideProps() {
       props: { makes: [], models: [] },
     };
   }
-
 }

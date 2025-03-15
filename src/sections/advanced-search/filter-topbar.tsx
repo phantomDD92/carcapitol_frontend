@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+// import { Search } from 'lucide-react';
+// import { Button } from '@/components/ui/button';
 import {
   Select,
   SelectContent,
@@ -40,13 +40,15 @@ const TopFiltersBar = ({
     setModel(0);
     const filtered = models.filter(item => item.id == 0 || item.make?.id == makeValue)
     setFilteredModels(filtered);
-    onFiltersChange && onFiltersChange({ make: makeValue, model: 0 })
+    if (onFiltersChange)
+      onFiltersChange({ make: makeValue, model: 0 })
   }
 
   const handleModelChange = (value: string) => {
     const modelValue = parseInt(value);
     setModel(modelValue);
-    onFiltersChange && onFiltersChange({ make, model: modelValue });
+    if (onFiltersChange)
+      onFiltersChange({ make, model: modelValue });
   }
 
   const getMakeName = (id: number) => {

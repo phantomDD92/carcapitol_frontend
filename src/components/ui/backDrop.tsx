@@ -16,7 +16,7 @@ export const BackDrop: React.FC<BackDropProps> = ({
   useEffect(() => {
     window.addEventListener('click', onClick);
     return () => window.removeEventListener('click', onClick);
-  }, []);
+  }, [onClick]);
 
   return (
     <div className={className} onClick={(e) => e.stopPropagation()}>
